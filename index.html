@@ -169,8 +169,10 @@
         border: 1px solid rgba(255,255,255,.9);
         box-shadow: 0 26px 70px rgba(20,22,36,.18);
         height: 520px;
-        position:relative;
-        overflow:hidden;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
       }
       .statusBar{
         height: 44px;
@@ -228,12 +230,14 @@
         color: rgba(20,22,36,.75);
       }
       .navBar{
-        position:absolute; left:0; right:0; bottom:0;
         height: 72px;
-        background: rgba(255,255,255,.78);
-        border-top: 1px solid rgba(255,255,255,.9);
-        display:flex; align-items:center; justify-content:space-around;
-        backdrop-filter: blur(16px);
+        background: rgba(255,255,255,.75);
+        border-top: 1px solid rgba(0,0,0,.05);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: auto;
       }
       .navItem{
         display:flex; flex-direction:column; align-items:center; gap:6px;
