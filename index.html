@@ -146,10 +146,36 @@
         box-shadow: 0 10px 28px rgba(20,22,36,.10);
         color: var(--ink);
       }
-      .note{
-        margin-top: 14px;
+      .highlights{
+        margin-top: 18px;
+        display: grid;
+        gap: 10px;
+      }
+      .highlight{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(255,255,255,.72);
+        border: 1px solid rgba(255,255,255,.95);
+        box-shadow: 0 10px 26px rgba(20,22,36,.08);
         font-size: 13px;
         color: var(--muted);
+      }
+      .highlight strong{
+        color: var(--ink);
+        font-size: 14px;
+      }
+      .highlightBadge{
+        font-weight: 700;
+        color: rgba(20,22,36,.65);
+        background: rgba(243,157,191,.18);
+        padding: 4px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,.9);
+        font-size: 12px;
       }
 
       /* “Phone” preview (pure HTML/SVG, no images needed) */
@@ -341,72 +367,83 @@
               </a>
             </div>
 
-            <div class="note">
-              No domain needed — this page can live on GitHub Pages for free.
+            <div class="highlights" aria-label="Milkly highlights">
+              <div class="highlight">
+                <strong>Shared timeline</strong>
+                <span class="highlightBadge">Live sync</span>
+              </div>
+              <div class="highlight">
+                <strong>Smart reminders</strong>
+                <span class="highlightBadge">Next feed ETA</span>
+              </div>
+              <div class="highlight">
+                <strong>Quick insights</strong>
+                <span class="highlightBadge">Daily totals</span>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="phoneWrap" aria-label="Milkly preview">
-           <div class="phoneContent">
-          <div class="phone">
-            <div class="statusBar">Milkly</div>
+          <div class="phoneContent">
+            <div class="phone">
+              <div class="statusBar">Milkly</div>
 
-            <div class="heroArt">
-              <!-- cute family illustration placeholder (SVG) -->
-              <svg width="280" height="150" viewBox="0 0 280 150" fill="none" aria-hidden="true">
-                <rect x="0" y="0" width="280" height="150" rx="26" fill="rgba(255,255,255,.25)"/>
-                <circle cx="245" cy="28" r="18" fill="#FFD86A"/>
-                <path d="M40 45c16-22 40-10 52 2" stroke="rgba(255,255,255,.95)" stroke-width="12" stroke-linecap="round"/>
-                <path d="M160 52c14-18 34-8 44 2" stroke="rgba(255,255,255,.9)" stroke-width="12" stroke-linecap="round"/>
-                <path d="M22 120c52 18 184 18 236 0" stroke="#9AD39A" stroke-width="28" stroke-linecap="round"/>
-                <!-- parents -->
-                <circle cx="88" cy="80" r="16" fill="#FFD9C8"/>
-                <rect x="76" y="95" width="24" height="40" rx="12" fill="#4B9CFF"/>
-                <circle cx="196" cy="80" r="16" fill="#FFD9C8"/>
-                <rect x="184" y="95" width="24" height="40" rx="12" fill="#F39DBF"/>
-                <!-- baby -->
-                <circle cx="142" cy="90" r="15" fill="#FFE5D8"/>
-                <ellipse cx="142" cy="118" rx="16" ry="24" fill="#FFF1B8"/>
-                <circle cx="136" cy="88" r="2" fill="#141624"/>
-                <circle cx="148" cy="88" r="2" fill="#141624"/>
-                <path d="M138 95c3 3 7 3 10 0" stroke="#141624" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-
-            <div class="card">
-              <div class="row">
-                <span class="tag">LAST FED</span>
-                <span class="tag">Today</span>
+              <div class="heroArt">
+                <!-- cute family illustration placeholder (SVG) -->
+                <svg width="280" height="150" viewBox="0 0 280 150" fill="none" aria-hidden="true">
+                  <rect x="0" y="0" width="280" height="150" rx="26" fill="rgba(255,255,255,.25)"/>
+                  <circle cx="245" cy="28" r="18" fill="#FFD86A"/>
+                  <path d="M40 45c16-22 40-10 52 2" stroke="rgba(255,255,255,.95)" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M160 52c14-18 34-8 44 2" stroke="rgba(255,255,255,.9)" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M22 120c52 18 184 18 236 0" stroke="#9AD39A" stroke-width="28" stroke-linecap="round"/>
+                  <!-- parents -->
+                  <circle cx="88" cy="80" r="16" fill="#FFD9C8"/>
+                  <rect x="76" y="95" width="24" height="40" rx="12" fill="#4B9CFF"/>
+                  <circle cx="196" cy="80" r="16" fill="#FFD9C8"/>
+                  <rect x="184" y="95" width="24" height="40" rx="12" fill="#F39DBF"/>
+                  <!-- baby -->
+                  <circle cx="142" cy="90" r="15" fill="#FFE5D8"/>
+                  <ellipse cx="142" cy="118" rx="16" ry="24" fill="#FFF1B8"/>
+                  <circle cx="136" cy="88" r="2" fill="#141624"/>
+                  <circle cx="148" cy="88" r="2" fill="#141624"/>
+                  <path d="M138 95c3 3 7 3 10 0" stroke="#141624" stroke-width="2" stroke-linecap="round"/>
+                </svg>
               </div>
-              <div class="big">about 1 hour ago</div>
-              <p class="muted">8 oz · 2:15 PM · by Arthur</p>
-            </div>
 
-            <div class="actionRow">
-              <div class="action actionPrimary">🍼 Log Feeding</div>
-              <div class="action actionSecondary">🧷 Log Diaper</div>
-            </div>
-
-            <div class="card">
-              <div class="row">
-                <strong style="letter-spacing:-.02em;">Today</strong>
-                <span class="tag">2 items</span>
-              </div>
-              <div style="margin-top:10px; display:grid; gap:10px;">
-                <div class="row" style="padding:12px; border-radius:18px; background:rgba(243,157,191,.22); border:1px solid rgba(255,255,255,.9);">
-                  <span class="tag">2:15 PM</span>
-                  <strong>🍼 8 oz</strong>
-                  <span class="muted" style="margin:0;">Arthur</span>
+              <div class="card">
+                <div class="row">
+                  <span class="tag">LAST FED</span>
+                  <span class="tag">Today</span>
                 </div>
-                <div class="row" style="padding:12px; border-radius:18px; background:rgba(159,211,255,.22); border:1px solid rgba(255,255,255,.9);">
-                  <span class="tag">2:15 PM</span>
-                  <strong>🍼 4 oz</strong>
-                  <span class="muted" style="margin:0;">Arthur</span>
+                <div class="big">about 1 hour ago</div>
+                <p class="muted">8 oz · 2:15 PM · by Arthur</p>
+              </div>
+
+              <div class="actionRow">
+                <div class="action actionPrimary">🍼 Log Feeding</div>
+                <div class="action actionSecondary">🧷 Log Diaper</div>
+              </div>
+
+              <div class="card">
+                <div class="row">
+                  <strong style="letter-spacing:-.02em;">Today</strong>
+                  <span class="tag">2 items</span>
+                </div>
+                <div style="margin-top:10px; display:grid; gap:10px;">
+                  <div class="row" style="padding:12px; border-radius:18px; background:rgba(243,157,191,.22); border:1px solid rgba(255,255,255,.9);">
+                    <span class="tag">2:15 PM</span>
+                    <strong>🍼 8 oz</strong>
+                    <span class="muted" style="margin:0;">Arthur</span>
+                  </div>
+                  <div class="row" style="padding:12px; border-radius:18px; background:rgba(159,211,255,.22); border:1px solid rgba(255,255,255,.9);">
+                    <span class="tag">2:15 PM</span>
+                    <strong>🍼 4 oz</strong>
+                    <span class="muted" style="margin:0;">Arthur</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
             <div class="navBar">
               <div class="navItem"><span class="dot active"></span>Home</div>
               <div class="navItem"><span class="dot"></span>Stats</div>
