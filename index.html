@@ -163,6 +163,11 @@
         position:relative;
         overflow:hidden;
       }
+      .phoneContent{
+        padding: 20px;
+        overflow-y: auto;
+        flex: 1;
+      }
       .phone{
         border-radius: 34px;
         background: linear-gradient(180deg, #d7efff, #fde7ef 65%, #fff);
@@ -343,6 +348,7 @@
         </div>
 
         <div class="phoneWrap" aria-label="Milkly preview">
+           <div class="phoneContent">
           <div class="phone">
             <div class="statusBar">Milkly</div>
 
@@ -400,7 +406,7 @@
                 </div>
               </div>
             </div>
-
+          </div>
             <div class="navBar">
               <div class="navItem"><span class="dot active"></span>Home</div>
               <div class="navItem"><span class="dot"></span>Stats</div>
