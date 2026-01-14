@@ -146,36 +146,20 @@
         box-shadow: 0 10px 28px rgba(20,22,36,.10);
         color: var(--ink);
       }
-      .highlights{
+      .heroIllustration{
         margin-top: 18px;
-        display: grid;
-        gap: 10px;
-      }
-      .highlight{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 10px 12px;
-        border-radius: 14px;
-        background: rgba(255,255,255,.72);
+        border-radius: 18px;
+        background: rgba(255,255,255,.75);
         border: 1px solid rgba(255,255,255,.95);
-        box-shadow: 0 10px 26px rgba(20,22,36,.08);
-        font-size: 13px;
-        color: var(--muted);
+        box-shadow: 0 12px 30px rgba(20,22,36,.08);
+        padding: 16px;
+        display: grid;
+        place-items: center;
       }
-      .highlight strong{
-        color: var(--ink);
-        font-size: 14px;
-      }
-      .highlightBadge{
-        font-weight: 700;
-        color: rgba(20,22,36,.65);
-        background: rgba(243,157,191,.18);
-        padding: 4px 8px;
-        border-radius: 999px;
-        border: 1px solid rgba(255,255,255,.9);
-        font-size: 12px;
+      .heroIllustration svg{
+        width: 100%;
+        height: auto;
+        max-width: 420px;
       }
 
       /* “Phone” preview (pure HTML/SVG, no images needed) */
@@ -367,19 +351,24 @@
               </a>
             </div>
 
-            <div class="highlights" aria-label="Milkly highlights">
-              <div class="highlight">
-                <strong>Shared timeline</strong>
-                <span class="highlightBadge">Live sync</span>
-              </div>
-              <div class="highlight">
-                <strong>Smart reminders</strong>
-                <span class="highlightBadge">Next feed ETA</span>
-              </div>
-              <div class="highlight">
-                <strong>Quick insights</strong>
-                <span class="highlightBadge">Daily totals</span>
-              </div>
+            <div class="heroIllustration" aria-label="Mom logging a feeding in Milkly">
+              <svg viewBox="0 0 420 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                <rect x="0" y="0" width="420" height="220" rx="26" fill="rgba(223,241,255,.7)"/>
+                <circle cx="360" cy="36" r="18" fill="#FFD86A"/>
+                <path d="M24 190c64 16 300 16 372 0" stroke="#9AD39A" stroke-width="30" stroke-linecap="round"/>
+                <circle cx="150" cy="86" r="26" fill="#FFD9C8"/>
+                <rect x="120" y="112" width="70" height="70" rx="30" fill="#4B9CFF"/>
+                <circle cx="214" cy="120" r="22" fill="#FFE5D8"/>
+                <rect x="200" y="136" width="46" height="36" rx="18" fill="#FFF1B8"/>
+                <path d="M208 128c6 6 14 6 20 0" stroke="#141624" stroke-width="2" stroke-linecap="round"/>
+                <rect x="188" y="104" width="54" height="14" rx="7" fill="#F39DBF"/>
+                <rect x="290" y="78" width="70" height="110" rx="18" fill="white"/>
+                <rect x="298" y="92" width="54" height="16" rx="8" fill="#F39DBF"/>
+                <rect x="298" y="116" width="54" height="10" rx="5" fill="#DFF1FF"/>
+                <rect x="298" y="134" width="40" height="10" rx="5" fill="#DFF1FF"/>
+                <rect x="100" y="150" width="26" height="12" rx="6" fill="#FFD86A"/>
+                <path d="M126 150h50" stroke="#FFD86A" stroke-width="8" stroke-linecap="round"/>
+              </svg>
             </div>
           </div>
         </div>
